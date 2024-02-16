@@ -5,10 +5,16 @@
      ``` 
      sudo apt install curl
      ```
-3. run these commands
+3. Run these commands
      ```
      curl -fsSL https://get.docker.com -o get-docker.sh
      sudo sh ./get-docker.sh
+     ```
+
+4. Run post installation commands
+     ```
+     sudo groupadd docker
+     sudo usermod -aG docker $USER
      ```
 
 DOCKER INSTALLED !!!
