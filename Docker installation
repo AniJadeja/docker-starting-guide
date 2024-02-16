@@ -1,0 +1,14 @@
+#Docker Installation (Linux)
+
+1. Visit https://docs.docker.com/engine/install/ubuntu/
+2. Install the `curl` command if not installed. 
+     ``` 
+     sudo apt install curl
+     ```
+3. run these commands
+     ```
+     curl -fsSL https://get.docker.com -o get-docker.sh
+     sudo sh ./get-docker.sh
+     ```
+
+DOCKER INSTALLED !!!
