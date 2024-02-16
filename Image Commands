@@ -6,4 +6,5 @@
      - ros is a image name and humble is a variant
 3. To remove the docker images: `docker image rm <imageName>` | `docker rmi <imageName>`
      - Accepts `-f` flag to force the deletion
-
+4. To run an image : `docker run <imageName>`
+5. To run and open a terminal in os : `docker run -it <imageName>`
