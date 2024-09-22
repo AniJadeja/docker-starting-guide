@@ -4,26 +4,26 @@
 
 Add this function to `~/.bashrc` 
 ```
-
-#custom command config for docker only
+# Custom command config for Docker only
 function dc() {
   case "$1" in
     up)
+      if [[ "$2" == "-c" ]]; then
+        # Run cleanup first if "-c" is passed as the second argument
+        docker system prune -a --volumes -f
+      fi
       docker-compose up --build
       ;;
     down)
       docker-compose down
       ;;
-    clean-up)
-      docker system prune -a --volumes -f
-      docker-compose up --build
-      ;;
     *)
-      echo "Usage: dkr {up|down|clean-up}"
+      echo "Usage: dc {up [-c]|down}"
       return 1
       ;;
   esac
 }
+
 ```
 
 This will configure three aliases. 
@@ -33,5 +33,5 @@ This will configure three aliases.
 
 ## use this with caution 
 
-3. `dc clean-up` : which will clean everything inside docker system. All the images, containers, volumes no matter they are in use or not. 
+3. `dc up -c` : which will clean everything inside docker system. All the images, containers, volumes no matter they are in use or not. 
                    It will run `docker system prune -a -f` and then `docker-compose up --build`.
