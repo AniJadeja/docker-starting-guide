@@ -29,7 +29,7 @@ function dc() {
 
 This will configure three aliases. 
 
-1. `dc up` : which will run `docker-compose up --build`
+1. `dc up` : which will run `docker-compose down` and then `docker-compose up --build`
 2. `dc down` : which will run `docker-compose down`
 
 ## use this with caution 
