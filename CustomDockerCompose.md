@@ -31,7 +31,7 @@ This will configure three aliases.
 1. `dc up` : which will run `docker-compose up --build`
 2. `dc down` : which will run `docker-compose down`
 
-## use this wil caution 
+## use this with caution 
 
 3. `dc clean-up` : which will clean everything inside docker system. All the images, containers, volumes no matter they are in use or not. 
                    It will run `docker system prune -a -f` and then `docker-compose up --build`.
