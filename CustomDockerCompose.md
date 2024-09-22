@@ -12,6 +12,7 @@ function dc() {
         # Run cleanup first if "-c" is passed as the second argument
         docker system prune -a --volumes -f
       fi
+      docker-compose down
       docker-compose up --build
       ;;
     down)
