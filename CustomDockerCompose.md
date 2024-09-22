@@ -1,6 +1,7 @@
 # This setup will create custom commands for docker.
 
-## Assumes that user is on linux system. Suitable replacement for windows can be obtained from chatgpt
+## Assumes that user is on linux system. Suitable replacement for windows and mac can be obtained from chatgpt by giving this script and asking for the replacement for the selected system.
+## I personally do not have mac or windows to test the replacement scripts
 
 Add this function to `~/.bashrc` 
 ```
